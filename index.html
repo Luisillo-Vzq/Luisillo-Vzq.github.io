@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fit House 54 - El mejor gimnasio en Zapopan. Membresías desde $600. Horarios flexibles L-V 6am-10pm. ¡Únete hoy!">
+    <meta name="keywords" content="gimnasio, fitness, Zapopan, Jalisco, membresías, entrenamiento">
+    <meta name="author" content="Fit House 54">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fit House 54 - Tu Gimnasio en Zapopan">
+    <meta property="og:description" content="Transforma tu cuerpo. Membresías desde $600/mes">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/hero-bg.jpg">
+    
+    <title>Fit House 54 | Gimnasio Premium en Zapopan - Membresías desde $600</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-yellow': '#CCFF00',
+                        'deep-black': '#0F0F0F',
+                        'dark-gray': '#1A1A1A',
+                        'mid-gray': '#2A2A2A',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-deep-black text-gray-100 font-['Inter']">
+    
+    <!-- Sticky Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-deep-black/95 backdrop-blur-sm border-b border-gray-800">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="assets/logo.png" alt="Fit House 54 Logo" class="h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="text-2xl font-black text-neon-yellow" style="display:none;">FIT HOUSE <span class="text-white">54</span></span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#horarios" class="hover:text-neon-yellow transition-colors">Horarios</a>
+                <a href="membresias.html" class="hover:text-neon-yellow transition-colors">Membresías</a>
+                <a href="#ubicacion" class="hover:text-neon-yellow transition-colors">Ubicación</a>
+            </div>
+            
+            <button onclick="openModal()" class="bg-neon-yellow text-deep-black px-6 py-2.5 rounded-lg font-bold hover:bg-yellow-300 transition-all hover:scale-105">
+                Unirse Ahora
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+            <div class="absolute inset-0 bg-gradient-to-br from-deep-black via-dark-gray to-deep-black"></div>
+            <div class="absolute inset-0 opacity-20">
+                <img src="assets/hero-bg.jpg" alt="Gym Background" class="w-full h-full object-cover" onerror="this.style.display='none';">
+            </div>
+            
+            <div class="relative z-10 container mx-auto px-4 text-center">
+                <div class="inline-flex items-center space-x-2 bg-dark-gray/80 px-4 py-2 rounded-full mb-6 border border-neon-yellow/30">
+                    <svg class="w-5 h-5 text-neon-yellow" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <span class="text-sm font-semibold">4.7 ★ Calificación | 56 Opiniones en Google</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                    <span class="bg-gradient-to-r from-white via-neon-yellow to-white bg-clip-text text-transparent">
+                        Transforma Tu Cuerpo
+                    </span>
+                    <br>
+                    <span class="text-white">En Fit House 54</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    El gimnasio más completo de Zapopan. Equipo de última generación, horarios flexibles y membresías accesibles desde <span class="text-neon-yellow font-bold">$300/mes</span>
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button onclick="openModal()" class="bg-neon-yellow text-deep-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all hover:scale-105 shadow-lg shadow-neon-yellow/30">
+                        Ver Membresías
+                    </button>
+                    <a href="#ubicacion" class="border-2 border-neon-yellow text-neon-yellow px-8 py-4 rounded-lg font-bold text-lg hover:bg-neon-yellow hover:text-deep-black transition-all">
+                        Visítanos
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <svg class="w-6 h-6 text-neon-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Horarios Section -->
+        <section id="horarios" class="py-20 bg-dark-gray">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-black mb-4">
+                        Horarios <span class="text-neon-yellow">Flexibles</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg">Adaptados a tu estilo de vida</p>
+                </div>
+                
+                <div class="max-w-3xl mx-auto bg-mid-gray rounded-2xl overflow-hidden border border-gray-700 shadow-xl">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-gradient-to-r from-deep-black to-mid-gray">
+                                <tr>
+                                    <th class="px-6 py-4 text-left text-neon-yellow font-bold text-lg">Día</th>
+                                    <th class="px-6 py-4 text-left text-neon-yellow font-bold text-lg">Horario</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-700">
+                                <tr class="hover:bg-gray-800 transition-colors">
+                                    <td class="px-6 py-5 font-semibold">Lunes - Viernes</td>
+                                    <td class="px-6 py-5 text-gray-300">6:00 a.m. – 10:00 p.m.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-800 transition-colors">
+                                    <td class="px-6 py-5 font-semibold">Sábado</td>
+                                    <td class="px-6 py-5 text-gray-300">7:00 a.m. – 3:00 p.m.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-800 transition-colors">
+                                    <td class="px-6 py-5 font-semibold">Domingo</td>
+                                    <td class="px-6 py-5 text-gray-300">8:00 a.m. – 2:00 p.m.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <p class="text-gray-400">¿Tienes dudas sobre horarios especiales?</p>
+                    <a href="https://wa.me/523311234567" target="_blank" class="inline-flex items-center text-neon-yellow hover:underline mt-2">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Contáctanos por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ubicación Section -->
+        <section id="ubicacion" class="py-20 bg-deep-black">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-black mb-4">
+                        Encuéntranos en <span class="text-neon-yellow">Zapopan</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg">Estamos cerca de ti</p>
+                </div>
+                
+                <div class="max-w-5xl mx-auto rounded-2xl overflow-hidden border border-gray-700 shadow-xl">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59726.292299236884!2d-103.38663497832027!3d20.6739208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b11138ef70db%3A0x77f42ae8c2baa935!2sFit%20House%2054!5e0!3m2!1ses-419!2smx!4v1771040970313!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="https://goo.gl/maps/fit-house-54" target="_blank" class="inline-block bg-neon-yellow text-deep-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-all">
+                        Abrir en Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-mid-gray via-dark-gray to-mid-gray">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    ¿Listo Para <span class="text-neon-yellow">Comenzar?</span>
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Únete a los cientos de personas que ya transformaron su vida en Fit House 54
+                </p>
+                <button onclick="openModal()" class="bg-neon-yellow text-deep-black px-10 py-5 rounded-lg font-bold text-xl hover:bg-yellow-300 transition-all hover:scale-105 shadow-lg shadow-neon-yellow/30">
+                    Ver Planes y Precios
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-deep-black border-t border-gray-800 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">&copy; 2025 Fit House 54. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="privacidad.html" class="text-gray-400 hover:text-neon-yellow transition-colors">Aviso de Privacidad</a>
+                    <a href="https://www.facebook.com/fithouse54" target="_blank" class="text-gray-400 hover:text-neon-yellow transition-colors">Facebook</a>
+                    <a href="https://www.instagram.com/fithouse54" target="_blank" class="text-gray-400 hover:text-neon-yellow transition-colors">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/523311234567?text=Hola,%20me%20interesa%20información%20sobre%20las%20membresías" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-110"
+       aria-label="Contactar por WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Modal de Membresías -->
+    <div id="membershipModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-dark-gray rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-700 shadow-2xl">
+            <div class="sticky top-0 bg-gradient-to-r from-deep-black to-mid-gray p-6 flex justify-between items-center border-b border-gray-700">
+                <h3 class="text-2xl font-black text-neon-yellow">Planes de Membresía</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="p-6">
+                <!-- Day Pass -->
+                <div class="bg-gradient-to-r from-neon-yellow/20 to-transparent rounded-xl p-4 border-2 border-neon-yellow mb-8">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="text-2xl font-bold text-neon-yellow">Day Pass</h4>
+                            <p class="text-gray-400">Pase por un día</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-4xl font-black text-neon-yellow">$50</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing Cards -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <!-- Mensual -->
+                    <div class="bg-mid-gray rounded-xl p-6 border border-gray-700 hover:border-neon-yellow transition-all">
+                        <h4 class="text-xl font-bold mb-2">Mensual</h4>
+                        <div class="mb-4">
+                            <p class="text-4xl font-black text-neon-yellow">$300<span class="text-sm text-gray-400">/mes</span></p>
+                            <p class="text-sm text-gray-400 mt-1">+ Inscripción: $150</p>
+                        </div>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-neon-yellow mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Acceso ilimitado
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-neon-yellow mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Todos los equipos
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-neon-yellow mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Flexibilidad máxima
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Trimestral -->
+                    <div class="bg-gradient-to-br from-neon-yellow/20 to-mid-gray rounded-xl p-6 border-2 border-neon-yellow relative">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-neon-yellow text-deep-black px-4 py-1 rounded-full text-xs font-bold">
+                            MÁS POPULAR
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Trimestral</h4>
+                        <div class="mb-4">
+                            <p class="text-4xl font-black text-neon-yellow">$900<span class="text-sm text-gray-400">/3 meses</span></p>
+                            <p class="text-sm text-gray-400 mt-1">+ Inscripción: $150</p>
+                            <p class="text-xs text-green-400 font-semibold mt-2">Ahorras vs pago mensual</p>
+                        </div>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-neon-yellow mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Todo lo anterior
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-neon-yellow mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Mejor relación calidad-precio
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Semestral -->
+                    <div class="bg-mid-gray rounded-xl p-6 border border-gray-700 hover:border-neon-yellow transition-all">
+                        <h4 class="text-xl font-bold mb-2">Semestral</h4>
+                        <div class="mb-4">
+                            <p class="text-4xl font-black text-neon-yellow">$1,800<span class="text-sm text-gray-400">/6 meses</span></p>
+                            <p class="text-sm text-gray-400 mt-1">+ Inscripción: $150</p>
+                            <p class="text-xs text-green-400 font-semibold mt-2">Gran ahorro</p>
+                        </div>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-neon-yellow mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Todo lo anterior
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-neon-yellow mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                6 meses de compromiso
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Anual -->
+                    <div class="bg-gradient-to-br from-neon-yellow/10 to-mid-gray rounded-xl p-6 border border-neon-yellow relative">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-xs font-bold">
+                            MEJOR PRECIO
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Anual</h4>
+                        <div class="mb-4">
+                            <p class="text-4xl font-black text-neon-yellow">$3,600<span class="text-sm text-gray-400">/año</span></p>
+                            <p class="text-sm text-gray-400 mt-1">+ Inscripción: $150</p>
+                            <p class="text-xs text-green-400 font-semibold mt-2">¡Máximo ahorro!</p>
+                        </div>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-neon-yellow mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Todo lo anterior
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-neon-yellow mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Precio más bajo por mes
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Payment Info -->
+                <div class="bg-mid-gray rounded-xl p-6 border border-gray-700 mb-6">
+                    <h4 class="text-xl font-bold mb-4 text-neon-yellow">Datos para Transferencia SPEI</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-400">Banco</p>
+                            <p class="font-semibold">BBVA Bancomer</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400">Titular</p>
+                            <p class="font-semibold">Fit House 54 S.A. de C.V.</p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <p class="text-sm text-gray-400">CLABE</p>
+                            <p class="font-mono font-semibold text-lg">012180001234567890</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-center">
+                        <img src="assets/qr-pago.png" alt="QR de Pago" class="w-48 h-48 border-4 border-neon-yellow rounded-lg" onerror="this.style.display='none';">
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/523311234567?text=Hola,%20quiero%20inscribirme%20a%20Fit%20House%2054" 
+                       target="_blank" 
+                       class="flex-1 bg-neon-yellow text-deep-black px-6 py-4 rounded-lg font-bold text-center hover:bg-yellow-300 transition-all">
+                        Inscribirme por WhatsApp
+                    </a>
+                    <button onclick="alert('Procesador de pagos próximamente disponible. Por favor usa WhatsApp o transferencia SPEI.')" 
+                            class="flex-1 border-2 border-neon-yellow text-neon-yellow px-6 py-4 rounded-lg font-bold hover:bg-neon-yellow hover:text-deep-black transition-all">
+                        Pagar con Tarjeta
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
